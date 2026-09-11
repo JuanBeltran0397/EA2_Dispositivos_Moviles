@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 1. ScrollView raíz que contiene la imagen de fondo y habilita el desplazamiento -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/imagen_app2"
+    android:fillViewport="true">
+
+    <!-- 2. LinearLayout interno que se adapta a la pantalla -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="125dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo Universidad"
+            android:scaleType="fitCenter"
+            android:src="@drawable/logo_u2" />
+
+        <!-- Tarjeta translúcida de contenido -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#99FFFFFF"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Texto donde se mostrará lo recibido -->
+                <TextView
+                    android:id="@+id/MensajeRecibido"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="Aquí aparecerá el mensaje"
+                    android:textColor="#1A2530"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!-- Botón para confirmar "Recibido" -->
+                <Button
+                    android:id="@+id/btnRecibido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#10B981"
+                    android:text="Recibido" />
+
+                <!-- Botón para confirmar "Cancelado" -->
+                <Button
+                    android:id="@+id/btnCancelado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:backgroundTint="#EF4444"
+                    android:text="Cancelar" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>
