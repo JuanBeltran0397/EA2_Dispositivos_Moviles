@@ -29,7 +29,7 @@ __Control de versiones:__ GitHub
 
 Bash
 
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/JuanBeltran0397/EA2_Dispositivos_Moviles.git
 
 2. Abrir el proyecto desde Android Studio.
 
